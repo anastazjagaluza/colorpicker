@@ -12,8 +12,8 @@ originalImg.addEventListener("load", function() {
 originalImg.src = "cat.jpg";
 originalBox.addEventListener("mousemove", registerCoords);
 function registerCoords(event) {
-  let x = event.clientX;
-  let y = event.clientY;
+  let x = event.offsetX;
+  let y = event.offsetY;
 
   canvasOriginal.putImageData(originalImgData, 0, 0);
   smallImgData = canvasOriginal.getImageData(x - 5, y + 5, 10, 10);
